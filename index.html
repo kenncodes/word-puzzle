@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wordle!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Urbanist:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div style="background-color: white">
+      <h1 id="title">Wordle</h1>
+    </div>
+    <div id="main">
+      <div class="row"></div>
+      <div class="row"></div>
+      <div class="row"></div>
+      <div class="row"></div>
+      <div class="row"></div>
+      <div class="row"></div>
+    </div>
+    <div style="display:block">
+        <div class="keyboardRow" id="keyboardRow1"></div>
+    </div>
+        <div  class="keyboardRow"id="keyboardRow2"></div>
+        <div  class="keyboardRow" id="keyboardRow3"></div>
+  
+  </body>
+</html>
+<style>
+ 
+  body {
+    background-image: url("https://flyingcdn-e81424e1.b-cdn.net/wp-content/uploads/2020/02/pink.jpg?width=800");
+    text-align: center;
+    font-family: "Gloria Hallelujah", cursive;
+  }
+</style>
+<script>
+  var rows = document.getElementsByClassName("row");
+  var main = document.getElementById("main");
+  var keyboard = document.getElementById("keyboard");
+  for (var i = 0; i < rows.length; i++) {
+    for (var j = 0; j < 5; j++) {
+      rows[i].innerHTML += '<div class="letterSpace">H</div>';
+    }
+    rows[i].innerHTML += "<br>";
+  }
+
+  letters1 = ["Q", "W", "E", "R", "T","Y", "U", "I", "O", "P"];
+  letters2 = ["A", "S", "D", "F", "G", "H","J", "K", "L"];
+  letters3 = ["Z", "X", "C", "V", "B", "N", "M"];
+
+  var row1= document.getElementById("keyboardRow1");
+  letters1.forEach((letter) => {
+    console.log(letter);
+    row1.innerHTML += '<div class="singleKeyboard">'+ letter + '</div>';
+  });
+
+  var row2= document.getElementById("keyboardRow2");
+  letters2.forEach((letter) => {
+    console.log(letter);
+    row2.innerHTML += '<div class="singleKeyboard">'+ letter + '</div>';
+  });
+
+  var row3= document.getElementById("keyboardRow3");
+  row3.innerHTML = '<div class="singleKeyboard">'+ "ENTER" + '</div>';
+  letters3.forEach((letter) => {
+    console.log(letter);
+    row3.innerHTML += '<div class="singleKeyboard">'+ letter + '</div>';
+  });
+  row3.innerHTML += '<div class="singleKeyboard">'+ "<<" + '</div>';
+
+  var choices = [];
+
+</script>
