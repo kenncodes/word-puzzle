@@ -1,11 +1,20 @@
+body{
+    text-align: center;
+    display: block;
+}
 #title {
   color: rgb(208, 97, 116);
   font-size: 30px;
 }
 #main {
+  
   margin: 0% 5%;
   border: 3px solid white;
   justify-content: center;
+  width:90%;
+  max-width: 600px;;
+  justify-self: center;
+  display:inline;
 }
 .row {
   display: flex;
@@ -20,6 +29,7 @@
   font-size: 20px;
   color: white;
   width: 60px !important;
+  height:50px;
   max-width: 100px;
 }
 .singleKeyboard {
